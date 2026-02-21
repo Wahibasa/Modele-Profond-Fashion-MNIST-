@@ -1,6 +1,6 @@
-# 🧠 Denoising Convolutional Autoencoder avec Grad-CAM
+#  Denoising Convolutional Autoencoder avec Data Augmentation et  Grad-CAM
 
-## 📌 Description du Projet
+##  Description du Projet
 
 Ce projet implémente un **autoencodeur convolutionnel profond** pour supprimer le bruit des images du dataset **Fashion-MNIST**.  
 L’objectif est de reconstruire des images propres à partir d’images bruitées et d’évaluer la qualité des reconstructions avec des métriques quantitatives (MSE, PSNR, SSIM).  
@@ -8,7 +8,7 @@ Le projet inclut également une **visualisation Grad-CAM** pour comprendre quell
 
 ---
 
-## 📌 Technologies Utilisées
+## Bibliothèques Utilisées
 
 - Python  
 - TensorFlow / Keras  
@@ -18,7 +18,7 @@ Le projet inclut également une **visualisation Grad-CAM** pour comprendre quell
 
 ---
 
-## 📌 Préparation des Données
+## Préparation des Données
 
 - Importation des bibliothèques nécessaires (NumPy, TensorFlow/Keras, Matplotlib, métriques PSNR/SSIM).  
 - Chargement du dataset **Fashion-MNIST** (60 000 images d’entraînement, 10 000 images de test).  
@@ -28,7 +28,7 @@ Le projet inclut également une **visualisation Grad-CAM** pour comprendre quell
 
 ---
 
-## 📌 Augmentation des Données et Ajout de Bruit
+##  Augmentation des Données et Ajout de Bruit
 
 - Définition d’une **augmentation de données** : rotations et translations pour enrichir le dataset.  
 - Création de générateurs pour l’entraînement et la validation (`ImageDataGenerator`).  
@@ -37,7 +37,7 @@ Le projet inclut également une **visualisation Grad-CAM** pour comprendre quell
 
 ---
 
-## 📌 Architecture de l’Autoencodeur
+## Architecture de l’Autoencodeur
 
 - Construit pour **supprimer le bruit** des images Fashion-MNIST.  
 - **Encodeur** : 7 couches (Conv2D + MaxPooling2D) compressant l’information dans la **bottleneck layer**.  
@@ -56,7 +56,7 @@ Le projet inclut également une **visualisation Grad-CAM** pour comprendre quell
 
 ---
 
-## 📌 Affichage des Courbes d’Apprentissage
+##  Affichage des Courbes d’Apprentissage
 
 - Visualisation de la **perte (MSE)** pour l’entraînement et la validation.  
 - Visualisation de la **métrique SSIM** pour l’entraînement et la validation.  
@@ -64,7 +64,7 @@ Le projet inclut également une **visualisation Grad-CAM** pour comprendre quell
 
 ---
 
-## 📌 Grad-CAM & Visualisation
+##  Grad-CAM & Visualisation
 
 - Génération d’**images bruitées** pour visualisation.  
 - Application de **Grad-CAM** sur la couche bottleneck pour identifier les zones importantes du modèle.  
@@ -77,28 +77,15 @@ Le projet inclut également une **visualisation Grad-CAM** pour comprendre quell
 
 ---
 
-## 📌 Évaluation et Résultats
+##  Évaluation et Résultats
 
 - Évaluation sur un échantillon du jeu de test.  
 - Calcul des métriques :  
-  - **MSE** (Erreur Quadratique Moyenne) ↓  
-  - **PSNR** (Peak Signal-to-Noise Ratio) ↑  
-  - **SSIM** (Structural Similarity Index) ↑  
+  - **MSE** (Erreur Quadratique Moyenne)  
+  - **PSNR** (Peak Signal-to-Noise Ratio)   
+  - **SSIM** (Structural Similarity Index)   
 - Ces métriques permettent de mesurer la qualité de reconstruction et la similarité avec les images originales.
 
----
 
-## 📌 Améliorations Futures
 
-- Tester sur des images plus grandes ou en couleur.  
-- Comparer avec d’autres architectures (U-Net, VAE).  
-- Déploiement du modèle pour une interface interactive.  
-- Optimisation de l’autoencodeur pour des reconstructions plus rapides et plus précises.
 
----
-
-## 📌 Références
-
-- Dataset : [Fashion-MNIST](https://github.com/zalandoresearch/fashion-mnist)  
-- TensorFlow / Keras documentation  
-- Grad-CAM : [Selvaraju et al., 2017](https://arxiv.org/abs/1610.02391)
