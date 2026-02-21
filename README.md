@@ -1,6 +1,6 @@
 # Modele-Profond-Fashion-MNIST-
 Ce projet implémente un Autoencodeur Convolutionnel profond pour la suppression de bruit (image denoising) sur le dataset Fashion-MNIST.
-But du Projet
+## But du Projet
 * Supprimer le bruit gaussien ajouté artificiellement aux images.
 * Reconstruire des images avec une haute fidélité visuelle.
 * Évaluer quantitativement la qualité de reconstruction.
