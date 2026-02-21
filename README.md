@@ -47,7 +47,7 @@ Le projet inclut également une **visualisation Grad-CAM** pour comprendre quell
 
 ---
 
-## 📌 Entraînement
+##  Entraînement
 
 - Le modèle est entraîné sur les images bruitées avec **validation sur le jeu de test**.  
 - **EarlyStopping** utilisé : surveille la `val_loss`, patience = 5 epochs, restaure les meilleurs poids.  
